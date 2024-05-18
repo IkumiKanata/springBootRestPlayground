@@ -17,7 +17,7 @@ public class EmployeeRestController {
     private final EmployeeService employeeService;
 
     @Autowired
-    public EmployeeRestController(EmployeeServiceImpl theEmployeeService) {
+    public EmployeeRestController(EmployeeService theEmployeeService) {
         employeeService = theEmployeeService;
     }
 
