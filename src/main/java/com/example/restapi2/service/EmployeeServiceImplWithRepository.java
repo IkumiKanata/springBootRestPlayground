@@ -1,6 +1,5 @@
 package com.example.restapi2.service;
 
-import com.example.restapi2.dao.EmployeeDAO;
 import com.example.restapi2.dao.EmployeeRepository;
 import com.example.restapi2.entity.Employee;
 import org.springframework.stereotype.Service;
@@ -18,6 +17,7 @@ public class EmployeeServiceImplWithRepository implements EmployeeService {
     public EmployeeServiceImplWithRepository(EmployeeRepository theEmployeeRepository) {
         employeeRepository = theEmployeeRepository;
     }
+
     @Override
     public List<Employee> findAll() {
         return employeeRepository.findAll();
@@ -26,7 +26,7 @@ public class EmployeeServiceImplWithRepository implements EmployeeService {
     @Override
     public Employee findById(int theId) {
         Optional<Employee> result = employeeRepository.findById(theId);
-        if(result.isEmpty()){
+        if (result.isEmpty()) {
             throw new RuntimeException("Did not find employee id - " + theId);
         }
         return result.get();
