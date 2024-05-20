@@ -2,7 +2,6 @@ package com.example.restapi2.service;
 
 import com.example.restapi2.dao.EmployeeDAO;
 import com.example.restapi2.entity.Employee;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -16,6 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl(EmployeeDAO theEmployeeDAO) {
         employeeDAO = theEmployeeDAO;
     }
+
     @Override
     public List<Employee> findAll() {
         return employeeDAO.findAll();

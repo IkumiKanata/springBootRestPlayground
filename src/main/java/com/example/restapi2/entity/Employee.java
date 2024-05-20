@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @Entity
 @Table(name = "employee")
@@ -36,7 +35,6 @@ public class Employee {
         this.lastName = lastName;
         this.email = email;
     }
-
 
 
 }
