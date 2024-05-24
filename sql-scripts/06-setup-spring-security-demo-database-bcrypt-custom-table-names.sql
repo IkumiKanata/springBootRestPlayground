@@ -1,4 +1,3 @@
-USE `employee_directory`;
 
 DROP TABLE IF EXISTS `roles`;
 DROP TABLE IF EXISTS `members`;
